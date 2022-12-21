@@ -34,7 +34,7 @@ const NavBar = () => {
     <div className="fixed w-full h-20 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
         <Image
-          src="/../public/assets/miresque-logo.png"
+          src="/assets/miresque-logo.png"
           alt="logo"
           width={75}
           height={50}
@@ -80,7 +80,7 @@ const NavBar = () => {
         >
           <div className="flex w-full items-center justify-between border-b">
             <Image
-              src="/../public/assets/miresque-logo.png"
+              src="/assets/miresque-logo.png"
               alt="logo"
               width={52.5}
               height={52.5}
