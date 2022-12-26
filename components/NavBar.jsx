@@ -32,12 +32,12 @@ const NavBar = () => {
 
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]">
-      <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16">
+      <div className="flex justify-between items-center max-w-[1240px] mx-auto h-full px-4">
         <Image
-          src="/assets/miresque-logo.png"
+          src="/assets/miresque-logo.svg"
           alt="logo"
-          width={75}
-          height={50}
+          width={40}
+          height={40}
         />
         <nav>
           <ul className="hidden md:flex">
@@ -63,6 +63,7 @@ const NavBar = () => {
           </div>
         </nav>
       </div>
+      {/* Mobile NavBar Menu */}
       <div
         className={
           navVisibility
@@ -80,10 +81,11 @@ const NavBar = () => {
         >
           <div className="flex w-full items-center justify-between border-b">
             <Image
-              src="/assets/miresque-logo.png"
+              src="/assets/miresque-logo.svg"
               alt="logo"
-              width={52.5}
-              height={52.5}
+              width={35}
+              height={35}
+              className="mb-1"
             />
             <AiOutlineClose
               onClick={handleNav}
