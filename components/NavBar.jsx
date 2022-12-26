@@ -1,19 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaLinkedin, FaDiscord, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 
 const NavBar = () => {
   const [navVisibility, setNavVisibility] = useState(false);
+  const [navShadow, setNavShadow] = useState(false);
+
+  useEffect(() => {
+    const handleNavShadow = () => {
+      if (window.scrollY >= 25) {
+        setNavShadow(true)
+      } else {
+        setNavShadow(false)
+      }
+    };
+
+    window.addEventListener('scroll', handleNavShadow);
+  }, []);
 
   const handleNav = () => {
     setNavVisibility(!navVisibility);
   };
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100] bg-[#FAF9F6]">
+    <div className={ navShadow ? "fixed w-full h-20 shadow-xl z-[100] bg-[#FAF9F6]" : "fixed w-full h-20 z-[100] bg-[#FAF9F6]"}>
       <div className="flex justify-between items-center max-w-[1240px] mx-auto h-full px-4">
         <Image
           src="/assets/miresque-logo.svg"
