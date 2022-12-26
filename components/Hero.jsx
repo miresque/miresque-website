@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <main className="w-full h-full pt-20">
       <div className="max-w-[1240px] w-full h-full mx-auto mt-2 p-2 flex flex-col items-center md:flex-row md:mt-0">
-        <div className="relative grid gap-5">
+        <div className="grid gap-5">
           <p>
             <strong>&#8212; Hello</strong>
           </p>
@@ -20,8 +20,9 @@ const Hero = () => {
             Scroll down and see what I can do!
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full grid place-items-center">
           <Image
+            className="md:float-right"
             src="/assets/hero-placeholder.png"
             alt="hero graphic of boy jumping"
             width={500}
@@ -29,7 +30,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="text-center hidden md:block">
+      <div className="text-center mt-14 hidden md:block">
         <p className="text-xs uppercase tracking-wide">SCROLL</p>
         <p className="text-2xl">&darr;</p>
       </div>
