@@ -28,11 +28,6 @@
   li {
     @apply cursor-pointer
   }
-
-  button {
-    @apply rounded-xl shadow-xl shadow-gray-400 uppercase bg-gradient-to-r from-red-400 to-gray-900 text-white
-  }
-
 }
 
 @layer components {
